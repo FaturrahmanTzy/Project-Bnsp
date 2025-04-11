@@ -118,7 +118,7 @@ const Pendaftaran = () => {
 
     if (result.isConfirmed) {
       try {
-        const res = await axios.post(`http://127.0.0.1:3000/api/v1/create`, formData);
+        const res = await axios.post(`https://fatur.rikpetik.site/api/v1/create`, formData);
         Swal.fire({
           title: "Sukses!",
           text: "Pendaftaran berhasil dilakukan.",

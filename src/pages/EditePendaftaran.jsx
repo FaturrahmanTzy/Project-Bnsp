@@ -32,7 +32,7 @@ const EditPendaftaran = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://127.0.0.1:3000/api/v1/${id}`);
+        const res = await axios.get(`https://fatur.rikpetik.site/api/v1/${id}`);
         setFormData({
           ...res.data,
           tgl_lahir: res.data.tgl_lahir?.slice(0, 10) // Format date for input
@@ -147,7 +147,7 @@ const EditPendaftaran = () => {
 
     if (result.isConfirmed) {
       try {
-        const res = await axios.put(`http://127.0.0.1:3000/api/v1/update/${id}`, formData);
+        const res = await axios.put(`https://fatur.rikpetik.site/api/v1/update/${id}`, formData);
         Swal.fire({
           title: "Sukses!",
           text: "Data berhasil diperbarui.",

@@ -31,7 +31,7 @@ function App() {
 
   const fetchData = () => {
     setLoading(true);
-    axios.get('http://127.0.0.1:3000/api/v1/')
+    axios.get('https://fatur.rikpetik.site/api/v1/')
       .then((res) => {
         setData(res.data);
         setLoading(false);
@@ -60,7 +60,7 @@ function App() {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://127.0.0.1:3000/api/v1/delete/${id}`);
+        await axios.delete(`https://fatur.rikpetik.site/api/v1/delete/${id}`);
         toast.success('Data berhasil dihapus!');
         fetchData();
       } catch (err) {
